@@ -68,6 +68,9 @@ class _ExternalPageState extends State<ExternalPage> with SingleTickerProviderSt
                     child: Column(
                       crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
+                                  Divider(
+          color: Color.fromARGB(255, 255, 255, 255),
+        ),
                     Center(
                       child: Text("XYZ Restraunt",
                        style: TextStyle(fontSize: 30),
@@ -76,7 +79,7 @@ class _ExternalPageState extends State<ExternalPage> with SingleTickerProviderSt
                     
                     SizedBox(height: 10),
               Divider(
-          color: Colors.amber,
+          color: Color.fromARGB(255, 255, 255, 255),
         )
                       ],
                     )

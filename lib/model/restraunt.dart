@@ -218,23 +218,24 @@ class Restraunt extends ChangeNotifier {
 
   void removeFromCart(CartItem cartItem) {
     int cartItemIndex = _cartItems.indexOf(cartItem);
-    if (_cartItems.isNotEmpty && cartItemIndex >= 0) {
+    if (_cartItems.isNotEmpty && cartItemIndex >= 1) {
       cartItem.quantity--;
     } else {
-      _cartItems.remove(cartItem);
+      _cartItems.clear();
       notifyListeners();
     }
+    notifyListeners();
   }
 
-double getTotalCartPrice() {
-  double totalPrice = 0.0;
-  
-  for (CartItem cartItem in _cartItems) {
-    totalPrice += cartItem.totalPrice; // Now includes the add-on price
-  }
+  double getTotalCartPrice() {
+    double totalPrice = 0.0;
 
-  return totalPrice;
-}
+    for (CartItem cartItem in _cartItems) {
+      totalPrice += cartItem.totalPrice; // Now includes the add-on price
+    }
+
+    return totalPrice;
+  }
 
   int getTotalItemsInCart() {
     int totalItems = 0;
@@ -248,5 +249,4 @@ double getTotalCartPrice() {
     _cartItems.clear();
     notifyListeners();
   }
-
 }

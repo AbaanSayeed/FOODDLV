@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:myapp/components/my_cart_tile.dart';
+import 'package:myapp/components/mybutton.dart';
 import 'package:myapp/model/restraunt.dart';
 import 'package:provider/provider.dart';
 
@@ -40,6 +41,17 @@ class CartPage extends StatelessWidget {
                   ),
                 ),
               ),
+              MyButton(
+                  onTap: () {
+                    Provider.of<Restraunt>(context, listen: false).clearCart();
+                    ScaffoldMessenger.of(context).showSnackBar(
+                      const SnackBar(content: Text('Order Placed!')),
+                    );
+                  },
+                  text: "Place Order"),
+              const SizedBox(
+                height: 10,
+              )
             ],
           ),
         );
