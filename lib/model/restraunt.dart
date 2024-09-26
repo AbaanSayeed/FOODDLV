@@ -164,7 +164,7 @@ class Restraunt extends ChangeNotifier {
     Food(
       name: "Pizza Value Meal",
       description: "Veg Pizza Served with a Coke ",
-      imagePath: "images//pizzaimg.png",
+      imagePath: "images/pizzaimg.png",
       price: 310,
       category: FoodType.main,
       availableAddons: [

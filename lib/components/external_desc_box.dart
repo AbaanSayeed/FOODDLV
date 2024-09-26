@@ -14,7 +14,7 @@ class ExternalDescBox extends StatelessWidget {
         borderRadius: BorderRadius.circular(12),
       ),
       padding: const EdgeInsets.all(25),
-      margin: const EdgeInsets.only(left: 25, right: 25, bottom: 25),
+      margin: const EdgeInsets.only(left: 25, right: 25, bottom: 15,),
       child: const Row(
         mainAxisAlignment: MainAxisAlignment.spaceEvenly,
         children: [
