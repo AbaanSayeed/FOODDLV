@@ -178,15 +178,31 @@ class Restraunt extends ChangeNotifier {
     Food(
       name: "Choco Lava",
       description: "Hot and sweet",
+      imagePath: "images/chocolava.png",
+      price: 130,
+      category: FoodType.desserts,
+      availableAddons: [
+        Addon(name: "Double", price: 40),
+      ],
+    ),
+    Food(
+      name: "Ice Cream",
+      description: "Flavours of your choice ",
+      imagePath: "images/iceCream.png",
+      price: 130,
+      category: FoodType.desserts,
+      availableAddons: [
+        Addon(name: "Double", price: 40),
+      ],
+    ),
+    Food(
+      name: "Tiramasu",
+      description: "Three layered Tiramasu",
       imagePath: "images/dessertsimg.png",
       price: 130,
       category: FoodType.desserts,
       availableAddons: [
-        Addon(name: "Extra Cheese", price: 40),
-        Addon(name: "Garlic Bread", price: 120),
-        Addon(name: "Extra Toppings", price: 20),
-        Addon(name: "Cheese Crust", price: 60),
-        Addon(name: "Thick Crust", price: 60),
+        Addon(name: "chocolate syrup dressing", price: 40),
       ],
     ),
   ];
@@ -217,12 +233,11 @@ class Restraunt extends ChangeNotifier {
   }
 
   void removeFromCart(CartItem cartItem) {
-    int cartItemIndex = _cartItems.indexOf(cartItem);
-    if (_cartItems.isNotEmpty && cartItemIndex >= 1) {
+    int cartItemIndex = cartItem.quantity;
+    if (cartItemIndex > 1) {
       cartItem.quantity--;
-    } else {
+    }  else if(cartItemIndex == 1)  {
       _cartItems.clear();
-      notifyListeners();
     }
     notifyListeners();
   }

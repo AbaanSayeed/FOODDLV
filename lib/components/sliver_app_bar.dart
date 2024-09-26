@@ -22,7 +22,7 @@ class MySliverAppBar extends StatelessWidget {
       backgroundColor: const Color.fromARGB(255, 37, 36, 36),
       title: Center(
           child: Text(
-        "XYZ Restraunt",
+        "Aravali Restraunt",
         style: TextStyle(
             fontFamily: "Sans serif",
             color: Colors.amber[300],

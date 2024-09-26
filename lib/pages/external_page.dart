@@ -48,6 +48,7 @@ class _ExternalPageState extends State<ExternalPage> with SingleTickerProviderSt
                           endIndent: 25,
                           color: Color.fromARGB(255, 255, 249, 249),
                         ),
+                        
                         ExternalDescBox(),
                         SizedBox(height: 55),
                       ],
@@ -71,16 +72,30 @@ class _ExternalPageState extends State<ExternalPage> with SingleTickerProviderSt
                                   Divider(
           color: Color.fromARGB(255, 255, 255, 255),
         ),
-                    Center(
-                      child: Text("XYZ Restraunt",
-                       style: TextStyle(fontSize: 30),
-                       textAlign: TextAlign.center, ),
-                    ),
+                    Text("Aravali Restraunt",
+                     style: TextStyle(fontSize: 30),
+                     textAlign: TextAlign.center, ),
+                    Text("Rating: 4.6/5",
+                    style: TextStyle(fontSize: 20),
+                    textAlign: TextAlign.center,),
                     
                     SizedBox(height: 10),
               Divider(
           color: Color.fromARGB(255, 255, 255, 255),
-        )
+        ),
+        Text("XYZ Restraunt",
+        style: TextStyle(fontSize: 30),
+                     textAlign: TextAlign.center, ),
+                    Text("Rating: 4/5",
+                    style: TextStyle(fontSize: 20),
+                    textAlign: TextAlign.center,),
+                    
+                    SizedBox(height: 10),
+              Divider(
+          color: Color.fromARGB(255, 255, 255, 255),
+        
+        ),
+     
                       ],
                     )
                   ),
@@ -88,6 +103,7 @@ class _ExternalPageState extends State<ExternalPage> with SingleTickerProviderSt
             ),
           ),
         ),
+
 
 
                     ],
